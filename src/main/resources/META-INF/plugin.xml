@@ -1,0 +1,23 @@
+<idea-plugin>
+    <id>com.gianluz.dangerkotlin.intellij</id>
+    <name>DangerKotlin</name>
+    <vendor email="gianluca.zuddas [at] gmail.com" url="http://gianluz.com">GitHub</vendor>
+    <category>Kotlin</category>
+
+    <description><![CDATA[
+    DangerKotlin plugin provides autocomplete for Dangerfile.df.kts
+    ]]></description>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>org.jetbrains.kotlin</depends>
+
+
+    <extensions defaultExtensionNs="org.jetbrains.kotlin">
+        <scriptDefinitionsProvider
+            implementation="com.gianluz.dangerkotlin.intellij.DangerFileScriptDefinitionProvider"/>
+    </extensions>
+
+    <actions>
+    </actions>
+</idea-plugin>
